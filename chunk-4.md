@@ -1,237 +1,149 @@
-# **TÓM TẮT CHUNK 4 – NHẬP MÔN KIẾN TRÚC MÁY TÍNH**
+# **CHUNK 4 – TRÍCH XUẤT KIẾN THỨC NHẬP MÔN KIẾN TRÚC MÁY TÍNH**
 
-**Môn học:** Nhập môn Kiến trúc máy tính\
-**Nguồn:** Giáo trình PDF Chunk 4 (trang 74–120)\
-**Phương pháp:** MapReduce\
-**Mục đích:** Trích xuất kiến thức mới và phần mở rộng so với Chunk 1, 2 và 3.
+**Nguồn:** Giáo trình PDF, trang 121–158 (PDF Chunk 4).\
+**Phương pháp:** MapReduce – đối chiếu với Chunk 1, 2 và 3.\
+**Mục tiêu:** Chỉ ghi nhận kiến thức mới và phần kiến thức được mở rộng.
 
 ## **1. Khái niệm và kiến thức mới**
 
-### **1.1. Giao dịch (Transaction)**
+### **1.1. Cơ sở dữ liệu quan hệ (Relational Database)**
 
-Mở rộng kiến thức cũ
+Kiến thức mới
 
-- Transaction là nhóm thao tác phải cùng thành công hoặc cùng thất bại.
-- Ví dụ: Chuyển tiền gồm hai thao tác: trừ tiền tài khoản A và cộng tiền tài khoản B.
-- Nếu xảy ra lỗi giữa chừng, dữ liệu có thể ở trạng thái chưa hoàn chỉnh.
-- Cần sử dụng ghi nhật ký và khôi phục lùi (Rollback) để xử lý lỗi.
+- **Khái niệm:** Tập dữ liệu được tổ chức thành các bảng và liên kết với nhau bằng khóa.
+- **Ví dụ:** Bảng sinh viên liên kết với bảng điểm thông qua mã số sinh viên.
+- **SQL:** Sử dụng truy vấn để chọn, nối và tổng hợp dữ liệu giữa các bảng.
+- **Lưu ý:** Thiết kế chuẩn hóa kém có thể gây trùng lặp dữ liệu.
 
-**Điểm cần nhớ:** Không để giao dịch chỉ thực hiện thành công một phần.
+Trang 128–129
 
-*Trang 74–76.*
+### **1.2. Địa chỉ IP (IP Address)**
 
-### **1.2. Giao thức mạng (Network Protocol)**
+Kiến thức mới
 
-Mở rộng kiến thức cũ
+- **Khái niệm:** Nhãn số dùng để định danh một thiết bị trong mạng.
+- **Ví dụ:** Máy tính trong phòng thực hành có địa chỉ `192.168.1.20`.
+- **DHCP:** Máy chủ DHCP cấp phát địa chỉ IP tự động cho thiết bị.
+- **Lưu ý:** Hai thiết bị trùng địa chỉ IP có thể gây xung đột mạng.
 
-- Giao thức mạng là tập hợp quy tắc giúp hai máy trao đổi dữ liệu.
-- HTTP quy định cách trình duyệt yêu cầu trang web.
-- Dữ liệu truyền qua mạng có thể bị mất hoặc đến sai thứ tự.
+Trang 137–140
 
-**Cơ chế xử lý:**
+### **1.3. Kiến trúc Client-Server**
 
-1. Bên gửi đánh số các gói tin.
-2. Bên nhận xác nhận gói tin đã nhận.
-3. Nếu thiếu gói tin, bên nhận yêu cầu gửi lại.
+Kiến thức mới
 
-**Ví dụ:** Trình duyệt gửi yêu cầu HTTP để lấy nội dung trang web.
+- **Khái niệm:** Mô hình trong đó máy khách (Client) gửi yêu cầu và máy chủ (Server) trả lời.
+- **Ví dụ:** Ứng dụng xem điểm gửi yêu cầu đến máy chủ của trường.
+- **Lưu ý:** Máy chủ có thể quá tải khi có nhiều người truy cập cùng lúc.
 
-*Trang 76–78.*
+Trang 138–141
 
-### **1.3. Tiến trình (Process)**
+### **1.4. Mã hóa (Encryption)**
 
-Mở rộng kiến thức cũ
+Kiến thức mới
 
-- Process là một chương trình đang chạy cùng không gian địa chỉ riêng.
-- Mỗi tiến trình có vùng bộ nhớ riêng.
-- Ví dụ: Mỗi cửa sổ trình soạn thảo có thể được xem là một tiến trình.
-- Rủi ro: Tiến trình gặp lỗi hoặc sử dụng quá nhiều bộ nhớ có thể ảnh hưởng đến hệ thống.
+- **Khái niệm:** Biến đổi dữ liệu để chỉ người có khóa phù hợp mới có thể đọc được.
+- **Quy trình:**
+  1. Bên gửi mã hóa dữ liệu bằng khóa.
+  2. Dữ liệu được gửi qua mạng.
+  3. Bên nhận giải mã bằng khóa tương ứng.
+- **Lưu ý:** Nếu khóa bị lộ, dữ liệu có thể bị lộ.
 
-*Trang 79–80.*
+Trang 146–148
 
-### **1.4. Kiểm thử đơn vị (Unit Testing)**
+## **2. Kiến thức được mở rộng từ Chunk 1–3**
 
-Kiến thức được củng cố
+| Chủ đề           | Nội dung bổ sung trong Chunk 4                                               |
+| ---------------- | ---------------------------------------------------------------------------- |
+| Network Protocol | Bên gửi đánh số gói tin; bên nhận xác nhận và yêu cầu gửi lại khi thiếu.     |
+| Unit Testing     | Viết test trước và chạy tự động mỗi khi thay đổi mã nguồn.                   |
+| Transaction      | Sử dụng ghi nhật ký và Rollback để khôi phục khi xảy ra lỗi.                 |
+| Backup           | Định kỳ sao lưu, đánh dấu phiên bản và thử khôi phục dữ liệu.                |
+| Virtual Memory   | Sử dụng Page Table để ánh xạ địa chỉ ảo sang địa chỉ vật lý.                 |
+| Cache            | Nhấn mạnh nguy cơ dữ liệu Cache lỗi thời nếu không đồng bộ với bộ nhớ chính. |
 
-- Unit Testing là kiểm tra từng hàm nhỏ một cách tự động.
-- Mục đích: Phát hiện lỗi trong từng thành phần của chương trình.
+### **2.1. Giao thức mạng (Network Protocol)**
+
+- Gói tin có thể bị mất hoặc đến sai thứ tự.
+- Bên gửi đánh số các gói tin.
+- Bên nhận xác nhận và yêu cầu gửi lại khi thiếu.
+
+Trang 130–132
+
+### **2.2. Kiểm thử đơn vị (Unit Testing)**
+
+- Kiểm tra từng hàm nhỏ một cách tự động.
 - Ví dụ: Kiểm tra hàm tính điểm trung bình với danh sách rỗng.
-- Lưu ý: Nếu thiếu các trường hợp biên (Edge Case), kiểm thử có thể bỏ sót lỗi.
+- Cần viết test trước và chạy tự động mỗi khi thay đổi mã.
+- Thiếu trường hợp biên (Edge Case) có thể khiến chương trình bỏ sót lỗi.
 
-*Trang 81–83.*
+Trang 135–136
 
-### **1.5. Sao lưu (Backup)**
+### **2.3. Giao dịch (Transaction)**
 
-Mở rộng kiến thức cũ
+- Các thao tác trong một giao dịch phải cùng thành công hoặc cùng thất bại.
+- Khi xảy ra lỗi giữa chừng, hệ thống sử dụng ghi nhật ký (Journal) và khôi phục lùi (Rollback).
+- Mục đích: Tránh để dữ liệu ở trạng thái nửa vời.
 
-- Backup là tạo bản sao dữ liệu ở nơi khác để khôi phục khi dữ liệu gốc bị mất.
-- Ví dụ: Sao lưu cơ sở dữ liệu điểm vào mỗi đêm.
+Trang 149–150
 
-**Quy trình cần nhớ:**
+### **2.4. Sao lưu (Backup)**
 
-1. Sao lưu dữ liệu định kỳ.
-2. Đánh dấu và quản lý phiên bản bản sao lưu.
-3. Thử khôi phục dữ liệu để kiểm tra khả năng sử dụng.
+- Tạo bản sao dữ liệu ở nơi khác để khôi phục khi xảy ra mất mát.
+- Ví dụ: Sao lưu cơ sở dữ liệu điểm mỗi đêm.
+- Quy trình cần nhớ:
+  1. Sao lưu định kỳ.
+  2. Đánh dấu phiên bản.
+  3. Thử khôi phục dữ liệu.
+- Lưu ý: Bản sao lưu chưa từng được thử khôi phục có thể vô dụng.
 
-**Lưu ý:** Bản sao lưu chưa từng được thử khôi phục có thể vô dụng.
+Trang 151–152
 
-*Trang 88–89.*
+### **2.5. Bộ nhớ ảo (Virtual Memory)**
 
-### **1.6. Độ phức tạp thuật toán (Algorithm Complexity)**
+- Cho phép tiến trình nhìn thấy không gian địa chỉ liên tục lớn hơn RAM thực tế.
+- Ví dụ: Máy có 8 GB RAM vẫn có thể chạy chương trình cần nhiều bộ nhớ hơn nhờ tráo trang ra đĩa.
+- **Page Table:** Bảng trang ánh xạ địa chỉ ảo sang địa chỉ vật lý.
+- **Thrashing:** Tráo trang quá nhiều khiến máy tính hoạt động chậm.
 
-Mở rộng kiến thức cũ
+Trang 153–155
 
-- Là thước đo thời gian hoặc bộ nhớ mà thuật toán sử dụng theo kích thước đầu vào.
-- O(N): Tìm kiếm tuần tự.
-- O(log N): Tìm kiếm nhị phân.
-- O(N²): Thường xuất hiện khi có vòng lặp lồng nhau và chạy chậm khi dữ liệu lớn.
+## **3. Kiến thức cũ được nhắc lại – không cần học lại**
 
-**Điểm cần nhớ:** Phân tích số vòng lặp, đặc biệt là vòng lặp lồng nhau, để ước lượng độ phức tạp.
+Các nội dung sau xuất hiện trong PDF nhưng đã được đề cập ở Chunk 1–3, không có bổ sung đáng kể:
 
-*Trang 94–96.*
+- Scheduler: Round-robin, Ready Queue, Starvation.
+- Thread: Bộ nhớ dùng chung, tranh chấp dữ liệu và Lock.
+- Cache: Cache Hit, Cache Miss và truy cập RAM.
+- SSD: Bộ nhớ flash và giới hạn số lần ghi.
+- Interrupt: CPU tạm dừng để xử lý sự kiện.
+- Git: Commit, lịch sử thay đổi và Conflict.
+- Algorithm Complexity: O(N), O(log N), O(N²).
 
-### **1.7. Bộ nhớ đệm (Cache)**
+## **4. Tổng hợp kiến thức Chunk 4 sau đối chiếu**
 
-Mở rộng kiến thức cũ
+| Nhóm           | Nội dung cần ghi nhớ                                             |
+| -------------- | ---------------------------------------------------------------- |
+| Kiến thức mới  | Relational Database, IP Address, DHCP, Client-Server, Encryption |
+| Network        | Đánh số gói tin, xác nhận và gửi lại                             |
+| Testing        | Viết test trước, tự động chạy lại khi thay đổi mã                |
+| Transaction    | Journal và Rollback                                              |
+| Backup         | Sao lưu, đánh dấu phiên bản, thử khôi phục                       |
+| Virtual Memory | Page Table ánh xạ địa chỉ ảo và địa chỉ vật lý                   |
+| Cache          | Nguy cơ dữ liệu lỗi thời khi không đồng bộ                       |
 
-- Cache là vùng nhớ nhỏ, tốc độ cao, nằm gần CPU.
-- Dùng để giữ bản sao của dữ liệu thường xuyên được sử dụng.
-- Ví dụ: CPU đọc cùng một mảng số nhiều lần, các phần tử có thể được giữ trong Cache.
+## **5. Lưu ý ôn tập**
 
-**Kiến thức bổ sung:**
+Các kiến thức nên ưu tiên ghi nhớ:
 
-- Dữ liệu trong Cache có thể bị lỗi thời nếu không được đồng bộ với bộ nhớ chính.
-- CPU cần kiểm tra và bảo đảm dữ liệu Cache phù hợp với bộ nhớ chính.
+1. Phân biệt cơ sở dữ liệu quan hệ và cách các bảng liên kết bằng khóa.
+2. Hiểu IP Address và vai trò cấp phát IP tự động của DHCP.
+3. Phân biệt Client và Server.
+4. Nắm quy trình mã hóa và giải mã.
+5. Nhớ cách xử lý gói tin bị mất trong giao thức mạng.
+6. Hiểu vai trò của Page Table trong Virtual Memory.
+7. Nắm quy trình sao lưu và thử khôi phục dữ liệu.
+8. Hiểu tại sao Unit Testing cần kiểm tra trường hợp biên.
 
-*Trang 97–99.*
 
-### **1.8. Hệ thống tệp (File System)**
-
-Mở rộng kiến thức cũ
-
-- File System tổ chức và đặt tên dữ liệu trên thiết bị lưu trữ.
-- Ví dụ: Thư mục chứa các tệp bài tập của sinh viên.
-- Rủi ro: Mất điện giữa chừng có thể làm hỏng cấu trúc thư mục.
-- Cần sử dụng ghi nhật ký (Journaling) để hỗ trợ khôi phục sau sự cố.
-
-*Trang 102–103.*
-
-### **1.9. Quản lý phiên bản (Version Control)**
-
-Mở rộng kiến thức cũ
-
-- Git lưu lại lịch sử thay đổi mã nguồn thông qua các lần Commit.
-- Khi hai người sửa cùng một dòng, có thể xảy ra xung đột (Conflict).
-
-**Quy trình xử lý:**
-
-1. Tạo nhánh (Branch).
-2. Thực hiện chỉnh sửa.
-3. Gộp nhánh (Merge).
-4. Giải quyết xung đột nếu có (Conflict Resolution).
-
-*Trang 111–112.*
-
-### **1.10. Ổ thể rắn (SSD)**
-
-Mở rộng kiến thức cũ
-
-- SSD sử dụng bộ nhớ flash không khả biến (Non-Volatile).
-- Tốc độ truy cập tính bằng micro-giây.
-- Mỗi ô nhớ flash có số lần ghi hữu hạn.
-- Bộ điều khiển cần phân bổ đều thao tác ghi lên các ô nhớ.
-
-**Điểm cần nhớ:** Phân phối thao tác ghi giúp tránh tập trung ghi quá nhiều vào một ô nhớ.
-
-*Trang 113–115.*
-
-### **1.11. Ngắt (Interrupt)**
-
-Mở rộng kiến thức cũ
-
-- Interrupt là tín hiệu yêu cầu CPU tạm dừng công việc hiện tại để xử lý sự kiện.
-- Ví dụ: Bàn phím gửi ngắt khi người dùng nhấn phím.
-- Quá nhiều ngắt liên tiếp có thể khiến hệ thống chậm.
-
-**Quy trình xử lý:**
-
-1. CPU lưu trạng thái hiện tại.
-2. CPU chuyển đến trình xử lý ngắt.
-3. Xử lý sự kiện.
-4. Quay lại công việc đang thực hiện.
-
-*Trang 115–117.*
-
-### **1.12. Hệ thống tệp (File System)**
-
-Mở rộng kiến thức cũ
-
-- File System tổ chức và đặt tên dữ liệu trên thiết bị lưu trữ.
-- Ví dụ: Thư mục chứa các tệp bài tập.
-- Mất điện giữa chừng có thể làm hỏng cấu trúc thư mục.
-- Cần ghi nhật ký (Journaling) để hỗ trợ khôi phục sau sự cố.
-
-*Trang 117–120.*
-
-## **2. Thuật ngữ quan trọng của Chunk 4**
-
-| Thuật ngữ             | Giải thích ngắn                                     |
-| --------------------- | --------------------------------------------------- |
-| Process               | Chương trình đang chạy, có không gian địa chỉ riêng |
-| Unit Testing          | Kiểm thử từng hàm nhỏ                               |
-| Backup                | Sao lưu dữ liệu                                     |
-| Edge Case             | Trường hợp biên cần kiểm tra                        |
-| Network Protocol      | Quy tắc trao đổi dữ liệu                            |
-| Conflict Resolution   | Giải quyết xung đột mã nguồn                        |
-| Commit                | Lưu lại một lần thay đổi trong Git                  |
-| Journaling            | Ghi nhật ký để hỗ trợ khôi phục                     |
-| Non-Volatile          | Không mất dữ liệu khi tắt nguồn                     |
-| Write Distribution    | Phân bổ thao tác ghi lên các ô nhớ                  |
-| Cache Synchronization | Đồng bộ dữ liệu Cache với bộ nhớ chính              |
-| Interrupt Handler     | Trình xử lý ngắt                                    |
-
-## **3. Đối chiếu Chunk 1–3 và Chunk 4**
-
-| Chủ đề       | Kiến thức được bổ sung trong Chunk 4                 |
-| ------------ | ---------------------------------------------------- |
-| Transaction  | Nhấn mạnh xử lý lỗi giữa giao dịch                   |
-| Network      | Đánh số, xác nhận và yêu cầu gửi lại gói tin         |
-| Process      | Không gian địa chỉ riêng                             |
-| Unit Testing | Kiểm tra hàm với danh sách rỗng                      |
-| Backup       | Quản lý phiên bản và thử khôi phục                   |
-| Complexity   | Phân tích số vòng lặp lồng nhau                      |
-| Cache        | Nguy cơ dữ liệu lỗi thời và đồng bộ                  |
-| File System  | Journaling hỗ trợ khôi phục                          |
-| Git          | Quy trình Branch → sửa → Merge → giải quyết Conflict |
-| SSD          | Bộ điều khiển phân bổ đều thao tác ghi               |
-| Interrupt    | Lưu trạng thái CPU và quay lại công việc             |
-| RAM          | Hệ điều hành cấp phát và thu hồi vùng nhớ            |
-| Thread       | Tiếp tục nhấn mạnh tranh chấp dữ liệu và Lock        |
-
-## **4. Kiến thức trọng tâm cần ôn thi**
-
-Ưu tiên ghi nhớ các nội dung sau:
-
-1. **Transaction:** Cơ chế Rollback khi giao dịch gặp lỗi.
-2. **Network Protocol:** Đánh số gói tin, xác nhận và gửi lại khi thiếu.
-3. **Process:** Chương trình đang chạy và không gian địa chỉ riêng.
-4. **Unit Testing:** Kiểm tra từng hàm và trường hợp biên.
-5. **Backup:** Sao lưu định kỳ, quản lý phiên bản, thử khôi phục.
-6. **Complexity:** Phân biệt O(N), O(log N), O(N²).
-7. **Cache:** Nguy cơ dữ liệu lỗi thời và đồng bộ.
-8. **Journaling:** Ghi nhật ký để khôi phục sau sự cố.
-9. **SSD:** Số lần ghi hữu hạn, cần phân bổ đều thao tác ghi.
-10. **Interrupt:** Lưu trạng thái → xử lý ngắt → quay lại.
-11. **Git:** Branch, Commit, Merge và Conflict Resolution.
-
-## **5. Lưu ý khi học Chunk 4**
-
-- Không học lại định nghĩa cũ nếu không có nội dung bổ sung.
-- Chú ý phân biệt Process và Thread.
-- Không nhầm Backup với Journaling: Backup tạo bản sao dữ liệu, Journaling ghi nhật ký hỗ trợ khôi phục.
-- Không nhầm RAM với SSD: RAM khả biến, SSD không khả biến.
-- Chú ý các câu hỏi tình huống: mất điện, mất gói tin, dữ liệu lỗi thời, tranh chấp dữ liệu và xung đột mã nguồn.
-
-**Kết luận:** Chunk 4 chủ yếu củng cố và mở rộng kiến thức từ Chunk 1–3. Những phần đáng chú ý nhất là cơ chế xác nhận gói tin, kiểm thử đơn vị, quy trình kiểm tra Backup, đồng bộ Cache, phân bổ thao tác ghi SSD và xử lý Interrupt.
-
-giao-trinh-nhap-mon-kien-truc-may-tinh-74-120.pdf
+**Kết luận:** Chunk 4 bổ sung đáng kể kiến thức về cơ sở dữ liệu, định danh thiết bị mạng, Client-Server, mã hóa và mở rộng cách quản lý bộ nhớ, kiểm thử, sao lưu và giao dịch. Đây là những nội dung nên đưa vào bộ kiến thức tích lũy của môn học.
