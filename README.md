@@ -89,6 +89,8 @@ AI thực hiện các công việc:
 - Bảo toàn thuật ngữ, ví dụ, quy trình và lưu ý quan trọng.
 - Sắp xếp lại nội dung thành một tài liệu tổng hợp có cấu trúc rõ ràng.
 
+  Nội dung tổng hợp kiến thức: - `summarize.md`
+
 ## **4. Kết quả đạt được**
 
 Hoàn thành một tài liệu Markdown tổng hợp kiến thức từ toàn bộ 194 trang PDF ban đầu, gồm 6 phần:
@@ -149,3 +151,5 @@ Sau khi hoàn thành toàn bộ tài liệu, hãy tổng kết những kiến th
 - Sử dụng tiếng Việt đơn giản, dễ hiểu, phù hợp với sinh viên năm nhất ngành CNTT.
 
 **Bắt đầu:** Hãy giới thiệu ngắn gọn cách ôn tập, sau đó đặt câu hỏi đầu tiên. Không đưa ra đáp án trước.
+
+Nội dung kiểm thử AI: -`giasu.md`
