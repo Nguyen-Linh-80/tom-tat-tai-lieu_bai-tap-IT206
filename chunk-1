@@ -1,0 +1,219 @@
+# **TÓM TẮT VÀ TRÍCH XUẤT THÔNG TIN**
+
+**Tài liệu:** Giáo trình Nhập môn Kiến trúc máy tính\
+**Phạm vi:** 37 trang PDF.
+
+> Lưu ý: Tài liệu ghi rõ đây là tài liệu mẫu dùng cho thực hành AI, nội dung được sinh tự động từ ngân hàng khái niệm và các con số, tên đều giả định. Nội dung dưới đây chỉ tổng hợp kiến thức xuất hiện trong tài liệu.
+
+## **1. Khái niệm chính**
+
+Tài liệu gồm 5 chương, tập trung vào các khái niệm về hệ thống máy tính, bộ nhớ, tiến trình, mạng và quản lý tài nguyên.
+
+| Khái niệm               | Nội dung cốt lõi                                                           | Trang        |
+| ----------------------- | -------------------------------------------------------------------------- | ------------ |
+| Địa chỉ IP              | Nhãn số định danh một thiết bị trong mạng.                                 | 2–3, 22–23   |
+| Ngắt (Interrupt)        | Tín hiệu yêu cầu CPU tạm dừng công việc để xử lý sự kiện khẩn.             | 4–5          |
+| Giao dịch (Transaction) | Nhóm thao tác phải cùng thành công hoặc cùng thất bại.                     | 6–7          |
+| Tiến trình (Process)    | Một chương trình đang chạy cùng không gian địa chỉ riêng.                  | 8–12         |
+| Độ phức tạp thuật toán  | Thước đo thời gian hoặc bộ nhớ theo kích thước đầu vào.                    | 13–14, 17–19 |
+| Luồng (Thread)          | Đơn vị thực thi nhỏ nhất trong một tiến trình, dùng chung bộ nhớ.          | 15–16        |
+| Quản lý phiên bản       | Ghi lại lịch sử thay đổi mã nguồn.                                         | 20–21        |
+| Bộ nhớ ảo               | Kỹ thuật cho tiến trình thấy không gian địa chỉ liên tục lớn hơn RAM thật. | 24–25, 30–31 |
+| Giao thức mạng          | Tập quy tắc để hai máy trao đổi dữ liệu.                                   | 26–27, 36–37 |
+| Hệ thống tệp            | Cách tổ chức và đặt tên dữ liệu trên thiết bị lưu trữ.                     | 28–29        |
+| Điện toán đám mây       | Thuê tài nguyên tính toán qua mạng theo nhu cầu.                           | 32–35        |
+
+## **2. Thuật ngữ quan trọng**
+
+### **2.1. Phần cứng và bộ nhớ**
+
+| Thuật ngữ  | Giải thích ngắn gọn                                                      |
+| ---------- | ------------------------------------------------------------------------ |
+| CPU        | Bộ phận xử lý các công việc của máy tính.                                |
+| RAM        | Bộ nhớ tạm khả biến, truy cập tính bằng nano-giây.                       |
+| SSD        | Thiết bị lưu trữ flash không khả biến, truy cập tính bằng micro-giây.    |
+| Cache      | Vùng nhớ nhỏ, rất nhanh, nằm gần CPU để lưu bản sao dữ liệu thường dùng. |
+| Bộ nhớ ảo  | Kỹ thuật mở rộng không gian địa chỉ mà tiến trình nhìn thấy.             |
+| Bảng trang | Ánh xạ địa chỉ ảo sang địa chỉ vật lý.                                   |
+
+### **2.2. Hệ điều hành và xử lý**
+
+| Thuật ngữ   | Giải thích ngắn gọn                                          |
+| ----------- | ------------------------------------------------------------ |
+| Process     | Chương trình đang chạy với không gian địa chỉ riêng.         |
+| Thread      | Đơn vị thực thi nhỏ nhất trong một tiến trình.               |
+| Interrupt   | Tín hiệu yêu cầu CPU xử lý sự kiện khẩn.                     |
+| Scheduler   | Thành phần chọn tiến trình nào được chạy tiếp.               |
+| Round-robin | Phương pháp chia mỗi tiến trình một lát thời gian bằng nhau. |
+| Lock        | Khóa bảo vệ vùng dữ liệu dùng chung giữa các luồng.          |
+| Rollback    | Khôi phục lùi khi giao dịch gặp lỗi.                         |
+| Thrashing   | Hiện tượng máy chậm do tráo trang quá nhiều.                 |
+
+### **2.3. Mạng và quản lý dữ liệu**
+
+| Thuật ngữ     | Giải thích ngắn gọn                                     |
+| ------------- | ------------------------------------------------------- |
+| DHCP          | Máy chủ cấp phát địa chỉ IP tự động.                    |
+| HTTP          | Quy định cách trình duyệt yêu cầu trang web.            |
+| Client-server | Mô hình máy khách gửi yêu cầu, máy chủ trả lời.         |
+| Git           | Công cụ ghi lại lịch sử thay đổi mã nguồn.              |
+| Commit        | Lần ghi nhận thay đổi trong Git.                        |
+| Branch        | Nhánh trong quá trình quản lý phiên bản.                |
+| Journaling    | Ghi nhật ký để hỗ trợ khôi phục hệ thống tệp sau sự cố. |
+
+### **2.4. Thuật toán và dịch vụ**
+
+| Thuật ngữ       | Giải thích ngắn gọn                                           |
+| --------------- | ------------------------------------------------------------- |
+| O(N)            | Độ phức tạp của tìm kiếm tuần tự trong ví dụ tài liệu.        |
+| O(log N)        | Độ phức tạp của tìm kiếm nhị phân trong ví dụ tài liệu.       |
+| O(N²)           | Thuật toán chạy rất chậm khi dữ liệu lớn theo ví dụ tài liệu. |
+| Cloud Computing | Thuê tài nguyên tính toán qua mạng theo nhu cầu.              |
+
+## **3. Kiến thức và quy trình cần nhớ**
+
+### **3.1. Xử lý ngắt (Interrupt)**
+
+Quy trình xử lý ngắt được tài liệu mô tả:
+
+1. CPU đang thực hiện công việc.
+2. Nhận tín hiệu ngắt.
+3. CPU lưu trạng thái hiện tại.
+4. Nhảy tới trình xử lý ngắt.
+5. Xử lý sự kiện.
+6. Quay lại công việc trước đó.
+
+Trang 4–5
+
+### **3.2. Xử lý giao dịch (Transaction)**
+
+- Các thao tác phải cùng thành công hoặc cùng thất bại.
+- Khi xảy ra lỗi giữa chừng, dữ liệu có thể ở trạng thái không hoàn chỉnh.
+- Sử dụng ghi nhật ký và khôi phục lùi (rollback).
+
+Trang 6–7
+
+### **3.3. Quản lý tiến trình và luồng**
+
+**Tiến trình (Process):**
+
+- Hệ điều hành tạo tiến trình.
+- Lập lịch tiến trình.
+- Kết thúc tiến trình.
+
+**Luồng (Thread):**
+
+- Các luồng trong cùng tiến trình dùng chung bộ nhớ.
+- Khi nhiều luồng cùng ghi một biến, có thể xảy ra tranh chấp dữ liệu.
+- Sử dụng khóa (lock) để bảo vệ vùng dữ liệu dùng chung.
+
+Trang 8–12, 15–16
+
+### **3.4. Phân tích độ phức tạp thuật toán**
+
+- Xem xét thời gian hoặc bộ nhớ theo kích thước đầu vào.
+- Phân tích số vòng lặp lồng nhau để ước lượng độ phức tạp.
+- Chú ý thuật toán O(N²) khi dữ liệu lớn.
+
+Trang 13–14
+
+### **3.5. Quản lý phiên bản bằng Git**
+
+Quy trình được tài liệu đề cập:
+
+1. Tạo nhánh.
+2. Sửa mã nguồn.
+3. Gộp nhánh.
+4. Giải quyết xung đột nếu có.
+
+Trang 20–21
+
+### **3.6. Quản lý bộ nhớ ảo**
+
+- Sử dụng bộ nhớ ảo để cung cấp không gian địa chỉ lớn hơn RAM thật.
+- Tráo trang ra đĩa khi cần.
+- Sử dụng bảng trang để ánh xạ địa chỉ ảo sang địa chỉ vật lý.
+- Chú ý hiện tượng thrashing khi tráo trang quá nhiều.
+
+Trang 24–25, 30–31
+
+### **3.7. Trao đổi dữ liệu qua mạng**
+
+- Hai máy cần tuân theo giao thức mạng.
+- Bên gửi đánh số gói tin.
+- Bên nhận xác nhận và yêu cầu gửi lại khi thiếu.
+
+Trang 26–27
+
+### **3.8. Quản lý tài nguyên đám mây**
+
+- Thuê tài nguyên tính toán qua mạng theo nhu cầu.
+- Theo dõi mức sử dụng tài nguyên.
+- Đặt hạn mức chi phí và cảnh báo sử dụng.
+
+Trang 32–35
+
+## **4. Ví dụ và lưu ý quan trọng**
+
+### **4.1. Ví dụ tiêu biểu**
+
+| Chủ đề            | Ví dụ trong tài liệu                                                    | Trang |
+| ----------------- | ----------------------------------------------------------------------- | ----- |
+| Địa chỉ IP        | Máy trong phòng lab có IP `192.168.1.20`.                               | 2     |
+| RAM               | Trình duyệt giữ các tab đang mở trong RAM.                              | 2     |
+| Ngắt              | Bàn phím gửi ngắt khi người dùng nhấn phím.                             | 4     |
+| Giao dịch         | Chuyển tiền gồm trừ tài khoản A và cộng tài khoản B.                    | 6     |
+| Tiến trình        | Mỗi cửa sổ trình soạn thảo là một tiến trình.                           | 8     |
+| Độ phức tạp       | Tìm kiếm tuần tự O(N), tìm kiếm nhị phân O(log N).                      | 13    |
+| Luồng             | Một luồng tải tệp, một luồng vẽ giao diện.                              | 15    |
+| Git               | Git lưu từng lần commit của nhóm.                                       | 20    |
+| Bộ nhớ ảo         | Máy 8 GB RAM vẫn chạy chương trình cần nhiều hơn nhờ tráo trang ra đĩa. | 24    |
+| Giao thức mạng    | HTTP quy định cách trình duyệt yêu cầu trang web.                       | 26    |
+| Hệ thống tệp      | Thư mục chứa các tệp bài tập của sinh viên.                             | 28    |
+| Điện toán đám mây | Chạy bài chấm tự động trên máy ảo thuê theo giờ.                        | 32    |
+
+### **4.2. Những rủi ro cần tránh**
+
+| Chủ đề            | Rủi ro được tài liệu đề cập                                 |
+| ----------------- | ----------------------------------------------------------- |
+| Địa chỉ IP        | Hai thiết bị trùng địa chỉ gây xung đột.                    |
+| Ngắt              | Quá nhiều ngắt liên tiếp làm hệ thống chậm.                 |
+| Giao dịch         | Lỗi giữa chừng để lại dữ liệu không hoàn chỉnh.             |
+| Tiến trình        | Tiến trình lỗi có thể chiếm hết bộ nhớ.                     |
+| Luồng             | Hai luồng cùng ghi một biến gây tranh chấp dữ liệu.         |
+| Cache             | Dữ liệu có thể lỗi thời nếu không đồng bộ với bộ nhớ chính. |
+| RAM               | Mất dữ liệu khi tắt nguồn.                                  |
+| SSD               | Số lần ghi trên mỗi ô nhớ flash là hữu hạn.                 |
+| Git               | Xung đột khi hai người sửa cùng một dòng.                   |
+| Bộ nhớ ảo         | Tráo trang quá nhiều làm máy chậm (thrashing).              |
+| Giao thức mạng    | Gói tin bị mất hoặc đến sai thứ tự.                         |
+| Hệ thống tệp      | Mất điện giữa chừng có thể làm hỏng cấu trúc thư mục.       |
+| Điện toán đám mây | Chi phí tăng nhanh nếu quên tắt tài nguyên.                 |
+
+### **4.3. Nguyên tắc quan trọng cần ghi nhớ**
+
+1. **Mạng:** Không để hai thiết bị trùng địa chỉ IP.
+2. **Ngắt:** CPU cần lưu trạng thái trước khi xử lý ngắt.
+3. **Giao dịch:** Các thao tác phải cùng thành công hoặc cùng thất bại.
+4. **Luồng:** Dùng lock để bảo vệ dữ liệu dùng chung.
+5. **Thuật toán:** Phân tích vòng lặp lồng nhau để ước lượng độ phức tạp.
+6. **Git:** Cần tạo nhánh, gộp và giải quyết xung đột.
+7. **Bộ nhớ ảo:** Cần bảng trang để ánh xạ địa chỉ.
+8. **Hệ thống tệp:** Sử dụng journaling để hỗ trợ khôi phục sau sự cố.
+9. **Đám mây:** Đặt hạn mức chi phí và cảnh báo sử dụng.
+
+## **Tổng kết kiến thức cần ưu tiên**
+
+Nếu cần ôn tập nhanh, nên tập trung vào 5 nhóm:
+
+| Nhóm kiến thức        | Nội dung cần nhớ                      |
+| --------------------- | ------------------------------------- |
+| Mạng máy tính         | IP, DHCP, HTTP, giao thức mạng        |
+| Hệ điều hành          | Interrupt, Process, Thread, Scheduler |
+| Bộ nhớ                | RAM, SSD, Cache, Bộ nhớ ảo            |
+| Xử lý dữ liệu         | Transaction, Rollback, Journaling     |
+| Thuật toán và quản lý | O(N), O(log N), O(N²), Git, Cloud     |
+
+**Lưu ý khi sử dụng tài liệu:** Một số nội dung được lặp lại nhiều lần ở các trang khác nhau. Bản trích xuất trên đã gộp các nội dung trùng lặp, giữ lại những khái niệm, quy trình, ví dụ và rủi ro chính thay vì lặp lại nguyên văn.
+
+giao-trinh-nhap-mon-kien-truc-may-tinh-1-37.pdf
